@@ -1,0 +1,27 @@
+<md-dialog aria-label="Add Device/Room">
+  <form ng-cloak>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <h4>Add Device or Room Name</h4>
+          <div class="inset"></div>
+          <div class="inset"></div>
+        <p>
+           <md-input-container class="md-block">
+            <label>Name</label>
+            <input ng-model="name">
+           </md-input-container>
+        </p>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button ng-click="Save()" md-autofocus>
+       Save
+      </md-button>
+      <span flex></span>
+      <md-button ng-click="Cancel()">
+       Cancel
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

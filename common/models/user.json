@@ -1,0 +1,38 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "phone": {
+      "type": "string"
+    },
+    "age": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "library": {
+      "type": "hasMany",
+      "model": "Library",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },{
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+      
+    }
+  ],
+  "methods": {}
+}

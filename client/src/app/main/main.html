@@ -1,0 +1,175 @@
+
+<div layout="column" layout-fill>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <div flex="15">
+                <md-icon>
+                 <a ui-sref="home">
+                    <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                    </svg>
+                 </a>
+                </md-icon>
+            </div>
+            <div flex="70">
+                <span class="md-title" layout="row" layout-align="center center">Bedroom</span>
+            </div>
+            <div flex="15">
+                
+            </div>
+        </div>
+    </md-toolbar>
+
+</div>
+
+<br>
+<!-- <div class="container-fluid background-room"  ng-style="{'background-image':'url(../assets/images/bedroom-design-example1.jpg)'}">
+</div> -->
+
+
+
+<div class="container">
+
+    <div class="row">
+
+        <!-- Air condition-->
+        <div class="device" flex-xs="100" flex-gt-xs="100" layout="column" >
+            <md-card md-theme="" md-theme-watch="">
+               <div layout="row" layout-align="start center">
+                
+                    <div layout="row" layout-align="start center">
+                        <i class="material-icons md-36">tv</i>
+                    </div>
+
+                    <div layout="column" layout-align="start ">
+                        <p class="lead">AIR CONDITIONER</p>
+                        <p class="lead">31°C</p>
+                    </div>
+
+                    <div layout="row" layout-align="end center" flex>
+                        <md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch>
+                        <div class="border-right"></div>
+                        <md-button>
+                          <i class="material-icons md-36">keyboard_arrow_right</i>
+                        </md-button>
+                    </div>
+
+               </div>
+            </md-card>
+        </div>
+
+<!--Microwave-->
+
+
+        <div class="device" flex-xs="100" flex-gt-xs="100" layout="column" >
+            <md-card md-theme="" md-theme-watch="">
+               <div layout="row" layout-align="start center">
+                
+                    <div layout="row" layout-align="start center">
+                        <i class="md-36"><img class="center-image microwave-thumbnail" ng-src="../assets/images/microwave.png"></i>
+                    </div>
+                    <div layout="column" layout-align="start ">
+                        <p class="lead">MICROWAVE</p>
+                        <p class="lead">00:00</p>
+                    </div>
+                    <div layout="row" layout-align="end center" flex>
+                        <md-switch ng-model="data.cb2" aria-label="Switch 1"></md-switch>
+                        <div class="border-right"></div>
+                        <md-button>
+                           <i class="material-icons md-36">keyboard_arrow_right</i>
+                        </md-button>
+                   </div>
+
+               </div>
+            </md-card>
+        </div>
+
+
+
+        <!-- temperature -->
+        <div class="well well-bg">
+            <div class="col-xs-6">
+                <h1> 24°c</h1>
+            </div>
+            <div class="col-xs-6 text-right">
+                <i class="material-icons md-48">face</i>
+            </div>
+        </div>
+<!-- Fan -->
+        
+        <div class="device" flex-xs="100" flex-gt-xs="100" layout="column" >
+            <md-card md-theme="" md-theme-watch="">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Fan</span>
+                    </md-card-title-text>
+                    <md-switch ng-model="data.cb3" aria-label="Switch 1"></md-switch>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="center">
+                    <i class="material-icons">toys</i>
+
+                    <md-slider flex="" min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider">
+                    </md-slider>
+                    <i class="material-icons">toys</i>
+               </md-card-actions>
+            </md-card>
+        </div>
+
+<!-- Light -->
+        <div class="device" flex-xs="100" flex-gt-xs="100" layout="column" >
+            <md-card md-theme="" md-theme-watch="">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Light</span>
+                    </md-card-title-text>
+                    <md-switch ng-model="data.cb4" aria-label="Switch 1"></md-switch>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="center">
+                    <i class="material-icons">brightness_5</i>
+
+                    <md-slider flex="" min="0" max="255" ng-model="color.green" aria-label="red" id="red-slider">
+                    </md-slider>
+                    <i class="material-icons">wb_sunny</i>
+               </md-card-actions>
+            </md-card>
+        </div>
+
+
+<!-- music player -->
+        <div class="device" flex-xs="100" flex-gt-xs="100" layout="column" >
+            <md-card md-theme="" md-theme-watch="">
+               <div layout="row" layout-align="start center">
+                
+                    <div layout="row" layout-align="start center">
+                        <i class="material-icons">library_music</i>
+                    </div>
+                    <div layout="column" layout-align="start ">
+                        <p class="lead">Music Player</p>
+                        <p class="lead">
+                          <md-button class="md-icon-button md-primary">
+                             <i class="material-icons">fast_forward</i>
+                          </md-button>
+                          <md-button class="md-icon-button md-primary">
+                              <i class="material-icons">play_arrow</i>
+                          </md-button>
+                          <md-button class="md-icon-button md-primary">
+                              <i class="material-icons">fast_rewind</i>
+                          </md-button>
+                        </p>
+                    </div>
+                    <div layout="row" layout-align="end center" flex>
+                        <md-switch ng-model="data.cb5" aria-label="Switch 1"></md-switch>
+                        <div class="border-right"></div>
+                        <md-button>
+                           <i class="material-icons md-36" ui-sref="music">keyboard_arrow_right</i>
+                        </md-button>
+                    </div>
+
+               </div>
+            </md-card>
+        </div>
+
+
+    </div>
+</div>

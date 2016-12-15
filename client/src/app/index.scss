@@ -1,0 +1,152 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+} 
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+
+.gridList .gray {
+  background: #f5f5f5; }
+
+.gridList .green {
+  background: #b9f6ca; }
+
+.gridList .yellow {
+  background: #ffff8d; }
+
+.gridList .blue {
+  background: #84ffff; }
+
+.gridList .darkBlue {
+  background: #80d8ff; }
+
+.gridList .deepBlue {
+  background: #448aff; }
+
+.gridList .purple {
+  background: #b388ff; }
+
+.gridList .lightPurple {
+  background: #8c9eff; }
+
+.gridList .red {
+  background: #ff8a80; }
+
+.gridList .pink {
+  background: #ff80ab; }
+
+
+.gridItem:hover{
+     box-shadow:  10px 10px 30px #888888;
+     cursor: pointer
+}
+
+
+// resolved conflict
+
+ md-switch {
+  margin:0;
+}
+.device .material-icons{
+  padding:10px;
+}
+.well {
+  margin-top:10px;
+  overflow:hidden;
+  color:white;
+}
+
+.well-bg{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcecfc+0,fba6e1+50,fd89d7+51,ff7cd8+100;Pink+Gloss+%232 */
+background: rgb(252,236,252); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 50%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(252,236,252,1) 0%,rgba(251,166,225,1) 50%,rgba(253,137,215,1) 51%,rgba(255,124,216,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(252,236,252,1) 0%,rgba(251,166,225,1) 50%,rgba(253,137,215,1) 51%,rgba(255,124,216,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#ff7cd8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.background-room {
+  height: 315px;
+}
+
+.center-image {
+  margin: 0 auto;
+}
+
+.music-thumbnail {
+  height: 230px;
+  width: 230px;
+}
+
+.fixed-container {
+  height: 100vh; 
+}
+
+.fixed-container .fixedUI {
+  min-height: unset;
+  max-height: none;
+}
+
+.microwave-thumbnail {
+  height: 35px;
+  width: 35px; 
+  padding:2px;
+  border-left:20px;
+}
+.png-icon{
+    margin: 5px auto auto;
+    padding: 0;
+    display: inline-block;
+    background-repeat: no-repeat no-repeat;
+    pointer-events: none;
+}
+
+/** for profile pic 
+ .md-button.logo {
+   height: 7rem;
+   width: 7rem;
+ }
+.logo-image {
+   height: 100%;
+   width: 100%;
+ }
+ */
+ 
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
