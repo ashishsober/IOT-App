@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodb": {
+    "host": "ds013918.mlab.com",
+    "port": 13918,
+    "url": "",
+    "database": "iot",
+    "password": "test",
+    "name": "mongodb",
+    "user": "test",
+    "connector": "mongodb"
+  }
+}
