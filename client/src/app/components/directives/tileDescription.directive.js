@@ -13,7 +13,6 @@
       scope: {
           tiledetails: '=tiledetails'
       }
-
     };
 
     return directive;

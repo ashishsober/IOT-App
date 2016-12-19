@@ -2,38 +2,34 @@
     <md-toolbar>
         <div class="md-toolbar-tools">
         	<div flex="15">
-                <a ui-sref="home">
-                    <md-button class="md-icon-button" aria-label="Settings">
-                        <md-icon>
-                            <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-                            </svg>
-                        </md-icon>
-                    </md-button>
+                <a ui-sref="home" flex layout="row" layout-align="start center">
+                    <md-icon flex layout="row" layout-align="start center">
+                        <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                        </svg>
+                    </md-icon>
                 </a>
         	</div>
         	<div flex="70">
         		<span class="md-title" layout="row" layout-align="center center">{{airConditioner.title}}</span>
         	</div>
-        	<div flex="15">
-        		<div layout="row" layout-align="end center">
-                    <md-button class="md-icon-button" aria-label="Settings">
-                        <md-icon>
-                            <svg layout-align="end center" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/>
-                                <path d="M0 0h24v24H0V0z" fill="none"/>
-                            </svg>
-                        </md-icon>
-                    </md-button>
-        		</div>
-        	</div>
+        	<div flex="15" layout="row" layout-align="end center">
+                <a flex layout="row" layout-align="end center">
+                    <md-icon flex layout="row" layout-align="end center">
+                        <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/>
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                        </svg>
+                    </md-icon>
+                </a>
+            </div>
         </div>
     </md-toolbar>
-    <md-content class="fixedUI" flex="100" layout="column" layout-align="end" layout-padding layout-fill>
+    <md-content class="fixedUI" flex="100" layout="column" layout-align="end" layout-padding layout-fill> 
     	<div flex="100" layout="row" layout-align="center center">
     		<div flex="20" layout="row" layout-align="center center">
-                <md-button class="md-fab md-primary md-mini" aria-label="Reduce Button">
+                <md-button class="md-fab md-primary md-mini decreaseTemp" ng-click="airConditioner.modifyTemperature('decrease')" aria-label="Reduce Button">
                     <md-icon>
                         <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 13H5v-2h14v2z"/>
@@ -43,83 +39,61 @@
                 </md-button>
             </div>
     		<div flex="60">
-    			<img class="center-image music-thumbnail" layout="row" layout-align="center center" ng-src="{{music.imageSrc}}">
+    			<div class="temperatureUI" flex="100">
+                    <div>
+                        <h3 ng-style="airConditioner.temperatureStyle">
+                            {{airConditioner.temperatureValue}}
+                            <span>&#x2103;</span>
+                        </h3>
+                        
+                    </div>
+                </div>
     		</div>
             <div flex="20" layout="row" layout-align="center center">
-                <md-button class="md-fab md-mini md-primary" aria-label="Increase Button">
+                <md-button class="md-fab md-mini md-primary increaseTemp" ng-click="airConditioner.modifyTemperature('increase')" aria-label="Increase Button">
                     <md-icon>
-                        <svg layout-align="end center" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/>
-                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                            <path d="M0 0h24v24H0z" fill="none"/>
                         </svg>
                     </md-icon>
                 </md-button>
             </div>
     	</div>
     	<div flex="100" layout="column" layout-align="center center">
-            <h5 class="md-title" layout-margin layout="row" layout-align="center center">{{music.songName}}</h5>
-            <h6 class="md-subhead" layout-margin layout="row" layout-align="center center">{{music.subTitle}}</h6>
+            <h3 flex="100" layout="row" layout-align="center center">Mode</h3>
+            <div flex="100" layout="row" layout-align="space-around center">
+                <div layout="column" layout-align="center center" flex>
+                    <md-button class="md-fab md-mini md-primary" aria-label="Cool" ng-class="airConditioner.modeButton == 'cool' ? 'highlight-button' : ''" ng-click="airConditioner.modifyTemperature('cool', 'mode')" flex>
+                        <md-icon md-svg-src="assets/images/snowflake.svg"></md-icon>
+                    </md-button>
+                    <h4 flex>Cool</h4>
+                </div>
+                <div layout="column" layout-align="center center" flex>
+                    <md-button class="md-fab md-mini md-primary" aria-label="Dry" ng-class="airConditioner.modeButton == 'dry' ? 'highlight-button' : ''" ng-click="airConditioner.modifyTemperature('dry', 'mode')" flex>
+                        <md-icon md-svg-src="assets/images/drop.svg"></md-icon>
+                    </md-button>
+                    <h4 flex>Dry</h4>
+                </div>
+                <div layout="column" layout-align="center center" flex>
+                    <md-button class="md-fab md-mini md-primary" aria-label="Heat" ng-class="airConditioner.modeButton == 'heat' ? 'highlight-button' : ''" ng-click="airConditioner.modifyTemperature('heat', 'mode')" flex>
+                        <md-icon md-svg-src="assets/images/heat.svg"></md-icon>
+                    </md-button>
+                    <h4 flex>Heat</h4>
+                </div>
+            </div>
     	</div>
-        <div flex="100" layout="column" layout-align="end">
+        <div flex="100" layout="column" layout-align="center center">
+            <h3 flex="100" layout="row" layout-align="center center">Fan Speed</h3>
             <div flex="100" layout="row" layout-align="center center">
-                <div flex="50" layout="row" layout-align="start center">
-                    {{music.startTime}}
-                </div>
-                <div flex="50" layout="row" layout-align="end center">
-                    {{music.endTime}}
+                <div class="fan-icon-container">
+                    <md-icon ng-style="airConditioner.fanStyle" md-svg-src="assets/images/fan.svg"></md-icon>
                 </div>
             </div>
-            <div flex="100" layout="row" layout-align="center center">
-                <md-slider flex min="0" max="{{music.seconds}}" aria-label="red" id="red-slider"></md-slider>
-            </div>
-            <div flex="100" layout="row" layout-align="center center">
-                <div flex="15" layout="row" layout-align="center center">
-                    <md-button class="md-icon-button md-primary" aria-label="Settings">
-                        <md-icon>
-                            <svg fill="#9b9b9b" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
-                            </svg>
-                        </md-icon>
-                    </md-button>
-                </div>
-                <div flex="70" layout="row" layout-align="center center">
-                    <div flex="40" layout="row" layout-align="center center">
-                        <md-button class="md-icon-button md-primary" aria-label="Settings">
-                            <md-icon>
-                                <svg fill="#009688" height="30" viewBox="2 2 26 26" width="30" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
-                                    <path d="M0 0h24v24H0z" fill="none"/>
-                                </svg>
-                            </md-icon>
-                        </md-button>
-                    </div>
-                    <div flex="30" layout="row" layout-align="center center">
-                        <md-button class="md-fab md-mini md-primary" aria-label="Play Button">
-                            <md-icon md-svg-src="assets/images/play_icon.svg"></md-icon>
-                        </md-button>
-                    </div>
-                    <div flex="40" layout="row" layout-align="center center">
-                        <md-button class="md-icon-button md-primary" aria-label="Settings">
-                            <md-icon>
-                                <svg fill="#009688" height="30" viewBox="2 2 26 26" width="30" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
-                                    <path d="M0 0h24v24H0z" fill="none"/>
-                                </svg>
-                            </md-icon>
-                        </md-button>
-                    </div>
-                </div>
-                <div flex="15" layout="row" layout-align="center center">
-                    <md-button class="md-icon-button md-primary" aria-label="Settings">
-                        <md-icon>
-                            <svg fill="#9b9b9b" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
-                            </svg>
-                        </md-icon>
-                    </md-button>
-                </div>
+            <div flex="100" layout="row" layout-align="space-around center">
+                <md-button class="md-raised md-primary roundCorner-button" ng-class="airConditioner.fanSpeedButton == 'low' ? 'highlight-button' : ''" ng-click="airConditioner.modifyTemperature('low', 'fan')">Low</md-button>
+                <md-button class="md-raised md-primary roundCorner-button" ng-class="airConditioner.fanSpeedButton == 'mid' ? 'highlight-button' : ''" ng-click="airConditioner.modifyTemperature('mid', 'fan')">Mid</md-button>
+                <md-button class="md-raised md-primary roundCorner-button" ng-class="airConditioner.fanSpeedButton == 'high' ? 'highlight-button' : ''" ng-click="airConditioner.modifyTemperature('high', 'fan')">High</md-button>
             </div>
         </div>
 	</md-content>

@@ -111,12 +111,110 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', end
 }
 
 .fixed-container {
-  height: 100vh; 
+  height: 100vh;
+  min-height: 560px; 
+  .fixedUI {
+    min-height: unset;
+    max-height: none;
+    .increaseTemp {
+      background-color: #f35757;
+    }
+    .increaseTemp.md-button.md-primary.md-fab:not([disabled]):hover {
+      background-color: #f35757;
+    }
+    .decreaseTemp {
+      background-color: #03A9F4;
+    }
+    .decreaseTemp.md-button.md-primary.md-fab:not([disabled]):hover {
+      background-color: #03A9F4;
+    }
+    .temperatureUI {
+      height: 170px;
+      width: 170px;
+      margin: 0 auto;
+      padding: 5px 5px;
+      border-radius: 50%;
+      background-image: -webkit-linear-gradient(#f35757, #03A9F4);
+      background-image: -o-linear-gradient(#f35757, #03A9F4);
+      background-image: -moz-linear-gradient(#f35757, #03A9F4);
+      background-image: -ms-linear-gradient(#f35757, #03A9F4);
+      background-image: linear-gradient(#f35757, #03A9F4);
+      > div {
+        display: table;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        > h3 {
+          display: table-cell;
+          vertical-align: middle;
+          position: relative;
+          font-size: 50px;
+          font-weight: 100;
+          > span {
+            width: 100%;
+            display: block;
+            font-size: 13px;
+            position: absolute;
+            bottom: 25px;
+            color: #aaa;
+          }
+        }
+      }
+    }
+    .transparentButton {
+      background-color: transparent;
+      box-shadow: none;
+      border: 1px solid #9b9b9b;
+    }
+    .transparentButton.md-button.md-fab:not([disabled]):hover {
+      background-color: transparent;
+    }
+    .layout-column > .flex-100 {
+      width: 100%;
+    }
+    .roundCorner-button {
+      border-radius: 19px;
+      text-transform: capitalize;
+      font-size: 18px;
+    }
+    .highlight-button {
+      background-color: #f50057 !important;
+    }
+    .fan-icon-container {
+      display: table;
+      background-color: #009688;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      text-align: center;
+      md-icon {
+        display: table-cell;
+      }
+    }
+  }
 }
 
-.fixed-container .fixedUI {
-  min-height: unset;
-  max-height: none;
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@-moz-keyframes spin {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+
+@-o-keyframes spin {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
 }
 
 .microwave-thumbnail {

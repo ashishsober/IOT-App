@@ -2,31 +2,27 @@
     <md-toolbar>
         <div class="md-toolbar-tools">
         	<div flex="15">
-                <a ui-sref="home">
-                    <md-button class="md-icon-button" aria-label="Settings">
-                        <md-icon>
-                            <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-                            </svg>
-                        </md-icon>
-                    </md-button>
+                <a ui-sref="home" flex layout="row" layout-align="start center">
+                    <md-icon flex layout="row" layout-align="start center">
+                        <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                        </svg>
+                    </md-icon>
                 </a>
         	</div>
         	<div flex="70">
         		<span class="md-title" layout="row" layout-align="center center">{{music.title}}</span>
         	</div>
-        	<div flex="15">
-        		<div layout="row" layout-align="end center">
-        			<md-button class="md-icon-button" aria-label="Settings">
-                        <md-icon>
-                            <svg layout-align="end center" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/>
-                                <path d="M0 0h24v24H0V0z" fill="none"/>
-                            </svg>
-                        </md-icon>
-                    </md-button>
-        		</div>
+        	<div flex="15" layout="row" layout-align="end center">
+                <a flex layout="row" layout-align="end center">
+                    <md-icon flex layout="row" layout-align="end center">
+                        <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/>
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                        </svg>
+                    </md-icon>
+                </a>
         	</div>
         </div>
     </md-toolbar>

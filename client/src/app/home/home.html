@@ -31,92 +31,68 @@
     </md-button>
     <md-toolbar>
         <div class="md-toolbar-tools" flex>
-             
-             <div flex="15">
-                <a ng-click="home.toggleSidenav('left')" aria-label="Menu">
-                  <md-icon>
-                      <svg height="100%" viewBox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false" fill="#ffffff">
-                          <path d="M0 0h24v24H0z" fill="none"></path>
-                          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-                      </svg>
-                  </md-icon>
-                </a>
-        	   </div>
-
-           	 <div flex="70">
-        		   <span class="md-title" layout="row" layout-align="center center">HOME AUTOMATION</span>
-        	   </div>
-             
-             <!-- for profile pic -->
-             <!-- <div flex="15">
-               <a ng-click="home.toggleSidenav('left')" aria-label="Menu">
-                 <md-button class="md-fab md-primary md-icon-button logo">
-                    <img class="logo-image" src="../assets/images/yeoman.png">
-                 </md-button>
-                </a>
-             </div> -->
-
+            <div flex="15">
+              <a ng-click="home.toggleSidenav('left')" aria-label="Menu">
+              <md-icon>
+                  <svg height="100%" viewBox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false" fill="#ffffff">
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                  </svg>
+              </md-icon>
+            </a>
+        	</div>
+           	<div flex="70">
+          		<span class="md-title" layout="row" layout-align="center center">HOME AUTOMATION</span>
+          	</div>
         </div>
-
         <md-tabs  md-stretch-tabs="always" class="md-primary" md-selected="data.selectedIndex">
-            <md-tab md-on-select="home.onTabChanges(0)" id="tab1" aria-controls="tab1-content">
-                Dashboard
-            </md-tab>
-            <md-tab md-on-select="home.onTabChanges(1)" id="tab2" aria-controls="tab2-content">
-                Modes
-            </md-tab>
+          <md-tab md-on-select="home.onTabChanges(0)" id="tab1" aria-controls="tab1-content">
+              Dashboard
+          </md-tab>
+          <md-tab md-on-select="home.onTabChanges(1)" id="tab2" aria-controls="tab2-content">
+              Modes
+          </md-tab>
         </md-tabs>
     </md-toolbar>
 
 </div>
- <md-content layout-padding>
-
-            <ng-switch on="data.selectedIndex" class="tabpanel-container">
-              <div role="tabpanel"
-                   id="tab1-content"
-                   aria-labelledby="tab1"
-                   ng-switch-when="0"
-                   md-swipe-left="next()"
-                   md-swipe-right="previous()"
-                   layout-padding layout-align="center center">
-                <div flex>
-                  
-                  <md-grid-list class="gridList"
-                        md-cols="1" md-cols-xs="2"  md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
-                        md-row-height-gt-md="3:3" md-row-height="3:3"
-                        md-gutter-gt-md="30px" md-gutter-md="30px" md-gutter-sm="30px" md-gutter="15px">
-
-                    <md-grid-tile ng-repeat="tile in home.tiles"
-                                 ng-class="tile.background" class="gridItem" ng-click="home.goToPage(tile)">
-                       <tile-description tiledetails="tile"></tile-description>
-                    </md-grid-tile>
-                        </md-grid-list>
-                  </div>
-                    
-                    
-              </div>
-              <div role="tabpanel"
-                   id="tab2-content"
-                   aria-labelledby="tab2"
-                   ng-switch-when="1"
-                   md-swipe-left="next()"
-                   md-swipe-right="previous()" 
-                   layout-padding layout-align="center center">
-                  <div flex>
-                  
-                    <md-grid-list class="gridList"
-                        md-cols="1" md-cols-xs="2" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
-                        md-row-height-gt-md="1:1" md-row-height="3:3"
-                        md-gutter-gt-md="30px" md-gutter-md="30px" md-gutter-sm="30px" md-gutter="15px">
-
-                    <md-grid-tile ng-repeat="tile in home.modes"
-                                 ng-class="tile.background" class="gridItem" ng-click="home.goToPage(tile)">
-                      <tile-description tiledetails="tile"></tile-description>
-                    </md-grid-tile>
-                        </md-grid-list>
-                  </div>
-                    
-              </div>
-              
-          </ng-switch>
-      </md-content>
+<md-content layout-padding>
+    <ng-switch on="data.selectedIndex" class="tabpanel-container">
+      <div role="tabpanel"
+           id="tab1-content"
+           aria-labelledby="tab1"
+           ng-switch-when="0"
+           md-swipe-left="next()"
+           md-swipe-right="previous()"
+           layout-padding layout-align="center center">
+        <div flex>
+          <md-grid-list class="gridList"
+                md-cols="1" md-cols-xs="2"  md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
+                md-row-height-gt-md="3:3" md-row-height="3:3"
+                md-gutter-gt-md="30px" md-gutter-md="30px" md-gutter-sm="30px" md-gutter="15px">
+            <md-grid-tile ng-repeat="tile in home.tiles" ng-class="tile.background" class="gridItem" ng-click="home.goToPage(tile)">
+               <tile-description tiledetails="tile"></tile-description>
+            </md-grid-tile>
+          </md-grid-list>
+        </div> 
+      </div>
+      <div role="tabpanel"
+           id="tab2-content"
+           aria-labelledby="tab2"
+           ng-switch-when="1"
+           md-swipe-left="next()"
+           md-swipe-right="previous()" 
+           layout-padding layout-align="center center">
+          <div flex>
+            <md-grid-list class="gridList"
+                md-cols="1" md-cols-xs="2" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
+                md-row-height-gt-md="1:1" md-row-height="3:3"
+                md-gutter-gt-md="30px" md-gutter-md="30px" md-gutter-sm="30px" md-gutter="15px">
+              <md-grid-tile ng-repeat="tile in home.modes" ng-class="tile.background" class="gridItem" ng-click="home.goToPage(tile)">
+                <tile-description tiledetails="tile"></tile-description>
+              </md-grid-tile>
+            </md-grid-list>
+          </div>
+      </div>
+  </ng-switch>
+</md-content>

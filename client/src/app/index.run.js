@@ -18,7 +18,6 @@ $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState
            if(isLogin){
                 return; // no need to redirect 
             } else if(toState.name != "login" && userInfo.authenticate) {
-              //console.log("still going home");
               return
             }
 
